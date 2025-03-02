@@ -2,17 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class Driver : MonoBehaviour
 {
+
+    public float rotationSpeed = 0.01f;
+    public float movementSpeed = 0.01f;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        transform.Rotate(0, 0, rotationSpeed);
+        transform.Translate(movementSpeed, 0, 0);
     }
 }
